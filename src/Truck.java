@@ -1,5 +1,9 @@
-public class Truck extends Car {
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+public class Truck extends Vehicle {
+    @Override
+    public void updateTyre() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку " + (i+1));
+        }
     }
 }

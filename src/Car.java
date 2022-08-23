@@ -1,5 +1,9 @@
-public class Car extends Bicycle {
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+public class Car extends Vehicle {
+    @Override
+    public void updateTyre() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку " + (i+1));
+        }
     }
 }
